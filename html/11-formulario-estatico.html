@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Formulario estático HTML</title>
+    <link rel="stylesheet" href="../css/02-estilos-completos.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">Formulario</p>
+            <h1>Ejemplo de formulario HTML (solo estático)</h1>
+            <p>Este formulario no envía datos todavía. Es solo estructura HTML para practicar.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Práctica</p>
+                <h2>Formulario de contacto</h2>
+            </div>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="nombre">Nombre</label><br>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo">
+                </p>
+
+                <p>
+                    <label for="correo">Correo</label><br>
+                    <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com">
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono</label><br>
+                    <input id="telefono" name="telefono" type="tel" placeholder="300 000 0000">
+                </p>
+
+                <p>
+                    <label for="asunto">Asunto</label><br>
+                    <select id="asunto" name="asunto">
+                        <option value="">Selecciona una opción</option>
+                        <option value="info">Quiero información</option>
+                        <option value="cotizacion">Quiero una cotización</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="mensaje">Mensaje</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+                </p>
+
+                <p>
+                    <input id="acepto" name="acepto" type="checkbox">
+                    <label for="acepto">Acepto términos y condiciones</label>
+                </p>
+
+                <p>
+                    <button class="button button-primary" type="submit">Enviar</button>
+                    <button class="button button-secondary" type="reset">Limpiar</button>
+                </p>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Nota</p>
+                <h2>¿Por qué estático?</h2>
+            </div>
+            <p>Porque aquí practicamos solo HTML. Más adelante puedes conectarlo con JavaScript o backend.</p>
+        </section>
+    </main>
+</body>
+
+</html>

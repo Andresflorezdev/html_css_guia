@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Etiquetas HTML</title>
+    <link rel="stylesheet" href="../css/02-estilos-completos.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">Referencia rápida</p>
+            <h1>Etiquetas HTML + ejemplos de uso</h1>
+            <p>Aquí no solo ves la etiqueta: también tienes ejemplos reales para copiar y practicar. Incluye qué
+                significan símbolos como &amp;lt; y &amp;gt;.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Entidades HTML</p>
+                <h2>¿Qué significa &amp;gt; y por qué se usa?</h2>
+            </div>
+            <p>En los ejemplos de código usamos entidades HTML para mostrar símbolos sin que el navegador los interprete
+                como etiquetas reales.</p>
+            <ul>
+                <li><strong>&amp;amp;lt;</strong> muestra <strong>&lt;</strong></li>
+                <li><strong>&amp;amp;gt;</strong> muestra <strong>&gt;</strong></li>
+                <li><strong>&amp;amp;amp;</strong> muestra <strong>&amp;</strong></li>
+                <li><strong>&amp;amp;quot;</strong> muestra <strong>"</strong></li>
+            </ul>
+            <pre class="code-block"><code>&amp;lt;h1&amp;gt;Hola&amp;lt;/h1&amp;gt;</code></pre>
+            <p>Eso se ve en pantalla como: <strong>&lt;h1&gt;Hola&lt;/h1&gt;</strong>.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Semánticas</p>
+                <h2>Estructura de página</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;header&gt;</h3>
+                    <p>Encabezado del sitio o de una sección.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;nav&gt;</h3>
+                    <p>Zona de enlaces de navegación.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;main&gt;</h3>
+                    <p>Contenido principal de la página.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;section&gt;</h3>
+                    <p>Agrupa contenido por tema.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;article&gt;</h3>
+                    <p>Bloque independiente: post, tarjeta, noticia.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;aside&gt;</h3>
+                    <p>Contenido complementario o lateral.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;footer&gt;</h3>
+                    <p>Pie de página o cierre de sección.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo semántico</p>
+                <h2>Layout base con etiquetas correctas</h2>
+            </div>
+            <pre class="code-block"><code>&lt;body&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;article&gt;...&lt;/article&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;...&lt;/aside&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Texto</p>
+                <h2>Etiquetas de contenido</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;h1&gt;...&lt;h6&gt;</h3>
+                    <p>Títulos con jerarquía.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;p&gt;</h3>
+                    <p>Párrafos de texto.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;strong&gt;</h3>
+                    <p>Texto importante.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;em&gt;</h3>
+                    <p>Énfasis de lectura.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;small&gt;</h3>
+                    <p>Texto secundario o legal.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;mark&gt;</h3>
+                    <p>Resalta una parte del texto.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;blockquote&gt;</h3>
+                    <p>Cita en bloque.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;code&gt;</h3>
+                    <p>Fragmento de código en línea.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;pre&gt;</h3>
+                    <p>Texto preformateado (código con saltos).</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo de texto</p>
+                <h2>Combinación de etiquetas de contenido</h2>
+            </div>
+            <pre class="code-block"><code>&lt;h2&gt;Título del artículo&lt;/h2&gt;
+&lt;p&gt;Este texto tiene &lt;strong&gt;importancia&lt;/strong&gt; y también &lt;em&gt;énfasis&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Publicado el 14 de abril&lt;/small&gt;&lt;/p&gt;
+&lt;blockquote&gt;Aprender haciendo es la mejor forma.&lt;/blockquote&gt;</code></pre>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Listas</p>
+                <h2>Listas y agrupación</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;ul&gt;</h3>
+                    <p>Lista desordenada (viñetas).</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;ol&gt;</h3>
+                    <p>Lista ordenada (números).</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;li&gt;</h3>
+                    <p>Elemento de una lista.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;dl&gt;</h3>
+                    <p>Lista de definiciones.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;dt&gt;</h3>
+                    <p>Término en una definición.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;dd&gt;</h3>
+                    <p>Descripción del término.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo de listas</p>
+                <h2>Ordenadas, desordenadas y de definición</h2>
+            </div>
+            <pre class="code-block"><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Estructura&lt;/li&gt;
+  &lt;li&gt;Estilos&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Header&lt;/dt&gt;
+  &lt;dd&gt;Parte superior de la página&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Media</p>
+                <h2>Imágenes, audio y video</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;img&gt;</h3>
+                    <p>Muestra imágenes.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;figure&gt;</h3>
+                    <p>Agrupa contenido visual.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;figcaption&gt;</h3>
+                    <p>Texto descriptivo de una figura.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;audio&gt;</h3>
+                    <p>Reproductor de audio.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;video&gt;</h3>
+                    <p>Reproductor de video.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;source&gt;</h3>
+                    <p>Fuente alternativa de audio/video.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;iframe&gt;</h3>
+                    <p>Inserta contenido externo (mapas, videos).</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo media</p>
+                <h2>Figura con descripción</h2>
+            </div>
+            <pre class="code-block"><code>&lt;figure&gt;
+  &lt;img src="foto.jpg" alt="Vista de la ciudad"&gt;
+  &lt;figcaption&gt;Ciudad al atardecer&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Tablas</p>
+                <h2>Etiquetas para datos tabulares</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;table&gt;</h3>
+                    <p>Contenedor principal de tabla.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;thead&gt;</h3>
+                    <p>Encabezado de la tabla.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;tbody&gt;</h3>
+                    <p>Cuerpo de la tabla.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;tr&gt;</h3>
+                    <p>Fila de tabla.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;th&gt;</h3>
+                    <p>Celda de encabezado.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;td&gt;</h3>
+                    <p>Celda de dato.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;caption&gt;</h3>
+                    <p>Título de la tabla.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo tabla</p>
+                <h2>Tabla básica de precios</h2>
+            </div>
+            <pre class="code-block"><code>&lt;table&gt;
+  &lt;caption&gt;Precios&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Plan&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Básico&lt;/td&gt;&lt;td&gt;$10&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Formularios</p>
+                <h2>Etiquetas para capturar datos</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>&lt;form&gt;</h3>
+                    <p>Contenedor del formulario.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;label&gt;</h3>
+                    <p>Etiqueta de campo.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;input&gt;</h3>
+                    <p>Campo de entrada.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;textarea&gt;</h3>
+                    <p>Campo de texto largo.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;select&gt;</h3>
+                    <p>Lista desplegable.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;option&gt;</h3>
+                    <p>Opción dentro de select.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;button&gt;</h3>
+                    <p>Botón de acción.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;fieldset&gt;</h3>
+                    <p>Agrupa campos relacionados.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>&lt;legend&gt;</h3>
+                    <p>Título de un fieldset.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplo formulario</p>
+                <h2>Formulario corto</h2>
+            </div>
+            <pre class="code-block"><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contacto&lt;/legend&gt;
+
+    &lt;label for="correo"&gt;Correo&lt;/label&gt;
+    &lt;input id="correo" type="email" /&gt;
+
+    &lt;label for="mensaje"&gt;Mensaje&lt;/label&gt;
+    &lt;textarea id="mensaje"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+        </section>
+    </main>
+</body>
+
+</html>

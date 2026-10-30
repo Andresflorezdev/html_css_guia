@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Página unida manualmente</title>
+    <link rel="stylesheet" href="../css/02-estilos-completos.css">
+</head>
+
+<body>
+    <!-- Este archivo une manualmente el código de header, nav, body/main y footer. -->
+    <!-- No se importan archivos HTML: todo está escrito aquí dentro. -->
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container hero-layout">
+            <div class="hero-copy">
+                <p class="eyebrow">Página unida</p>
+                <h1>Sitio armado por partes</h1>
+                <p>Esta página se construyó copiando y uniendo bloques HTML manualmente.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#inicio">Empezar</a>
+                    <a class="button button-secondary" href="#ejemplos">Ver ejemplos</a>
+                </div>
+            </div>
+            <aside class="hero-panel" aria-label="Nota">
+                <p class="panel-title">Nota</p>
+                <p>Separar por partes te ayuda a enseñar y mantener orden.</p>
+            </aside>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="site-nav">
+        <div class="container nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#estructura">Estructura</a>
+            <a href="#ejemplos">Ejemplos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- BODY / MAIN -->
+    <main class="container">
+        <section id="inicio" class="card hero">
+            <div class="section-heading">
+                <p class="eyebrow">Inicio</p>
+                <h2>Contenido principal</h2>
+            </div>
+            <p>Aquí va el mensaje principal de la página.</p>
+        </section>
+
+        <section id="estructura" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Estructura</p>
+                <h2>Bloques usados</h2>
+            </div>
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>Header</h3>
+                    <p>Zona superior con título y acciones.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>Nav</h3>
+                    <p>Enlaces para navegar dentro de la página.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>Main</h3>
+                    <p>Contenido central con secciones y tarjetas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="ejemplos" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Ejemplos</p>
+                <h2>Snippets útiles</h2>
+            </div>
+            <div class="example-grid">
+                <article class="card example-card">
+                    <h3>HTML simple</h3>
+                    <pre class="code-block"><code>&lt;main&gt;
+  &lt;section&gt;Contenido&lt;/section&gt;
+&lt;/main&gt;</code></pre>
+                </article>
+                <article class="card example-card">
+                    <h3>CSS simple</h3>
+                    <pre class="code-block"><code>.box {
+  padding: 1rem;
+  border-radius: 12px;
+}</code></pre>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="site-footer">
+        <div class="container">
+            <p>Página final armada manualmente sin importar HTML.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
