@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía práctica de HTML y CSS</title>
+    <link rel="stylesheet" href="css/02-estilos-completos.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- Encabezado principal: presentación y ruta de aprendizaje -->
+    <header class="site-header">
+        <div class="container hero-layout">
+            <div class="hero-copy">
+                <p class="eyebrow">Guía práctica</p>
+                <h1>HTML y CSS desde cero hasta una base profesional</h1>
+                <p>Aprende a escribir una página web con estructura limpia, semántica correcta y estilos que se puedan
+                    mantener sin complicarte.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#estructura">Ver estructura</a>
+                    <a class="button button-secondary" href="#css">Ver CSS</a>
+                </div>
+            </div>
+
+            <aside class="hero-panel" aria-label="Ruta de aprendizaje">
+                <p class="panel-title">Ruta recomendada</p>
+                <ol class="roadmap">
+                    <li>Primero la estructura HTML.</li>
+                    <li>Luego la semántica.</li>
+                    <li>Después los estilos base.</li>
+                    <li>Al final el responsive y los detalles.</li>
+                </ol>
+            </aside>
+        </div>
+    </header>
+
+    <!-- Navegación interna de la guía -->
+    <nav class="site-nav">
+        <div class="container nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#portal">Portal</a>
+            <a href="#estructura">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#ejemplos">Ejemplos</a>
+            <a href="#ejemplos-avanzados">Más ejemplos</a>
+            <a href="#ejemplo">Ejemplo</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal del mini curso -->
+    <main id="contenido" class="container">
+        <!-- Portal principal para abrir cualquier archivo de la guía -->
+        <section id="portal" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Portal</p>
+                <h2>Acceso rápido a todos los HTML</h2>
+            </div>
+
+            <div class="file-grid">
+                <article class="card file-card">
+                    <h3>Fundamentos</h3>
+                    <ul class="file-link-list">
+                        <li><a href="html/01-estructura-basica.html">01 - Estructura básica</a></li>
+                        <li><a href="html/02-secciones-semantic.html">02 - Secciones semánticas</a></li>
+                        <li><a href="html/03-pagina-completa.html">03 - Página completa</a></li>
+                    </ul>
+                </article>
+
+                <article class="card file-card">
+                    <h3>Por partes</h3>
+                    <ul class="file-link-list">
+                        <li><a href="html/04-header-parte.html">04 - Parte Header</a></li>
+                        <li><a href="html/05-body-main-parte.html">05 - Parte Body/Main</a></li>
+                        <li><a href="html/06-footer-parte.html">06 - Parte Footer</a></li>
+                        <li><a href="html/07-nav-parte.html">07 - Parte Nav</a></li>
+                        <li><a href="html/08-pagina-unida-manual.html">08 - Página unida manual</a></li>
+                    </ul>
+                </article>
+
+                <article class="card file-card">
+                    <h3>Referencias</h3>
+                    <ul class="file-link-list">
+                        <li><a href="html/09-para-que-sirve-cada-bloque.html">09 - Para qué sirve cada bloque</a></li>
+                        <li><a href="html/10-etiquetas-html.html">10 - Etiquetas HTML (ampliado)</a></li>
+                        <li><a href="html/11-formulario-estatico.html">11 - Formulario estático</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="inicio" class="card hero">
+            <div class="section-heading">
+                <p class="eyebrow">Resumen</p>
+                <h2>Qué vas a aprender</h2>
+            </div>
+            <p>HTML organiza el contenido y CSS lo convierte en una interfaz clara, legible y visualmente consistente.
+            </p>
+            <ul class="inline-points">
+                <li>Semántica útil.</li>
+                <li>Componentes reutilizables.</li>
+                <li>Diseño adaptable a móvil y escritorio.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque de estructura HTML -->
+        <section id="estructura" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">HTML</p>
+                <h2>Etiquetas que sí importan</h2>
+            </div>
+
+            <div class="tag-grid">
+                <article class="card tag-card">
+                    <h3>header</h3>
+                    <p>Encabezado de la página o de una sección. Suele llevar el título, una descripción o acciones
+                        principales.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>nav</h3>
+                    <p>Bloque de navegación. Aquí van los enlaces que ayudan a moverse por el contenido o por el sitio.
+                    </p>
+                </article>
+                <article class="card tag-card">
+                    <h3>main</h3>
+                    <p>Contenido principal de la página. Debe existir uno solo por documento para no confundir la
+                        estructura.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>section</h3>
+                    <p>Agrupa contenido relacionado dentro de una misma temática. Es ideal para dividir la página en
+                        bloques claros.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>article</h3>
+                    <p>Representa una pieza independiente de contenido: una tarjeta, noticia, post o elemento
+                        reutilizable.</p>
+                </article>
+                <article class="card tag-card">
+                    <h3>footer</h3>
+                    <p>Zona final de la página. Suele contener enlaces secundarios, copyright o información adicional.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ejemplo de estructura semántica y criterio de uso -->
+        <section id="ejemplo" class="split-section">
+            <article class="card code-card">
+                <div class="section-heading">
+                    <p class="eyebrow">Ejemplo</p>
+                    <h2>Estructura base bien armada</h2>
+                </div>
+                <p>Piensa en una página como partes simples: arriba va el encabezado, en el medio el contenido y abajo
+                    el pie.</p>
+                <pre class="code-block"><code>&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;p&gt;Aquí va el contenido principal.&lt;/p&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Información final.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+            </article>
+
+            <aside class="card tip-card">
+                <div class="section-heading">
+                    <p class="eyebrow">Criterio senior</p>
+                    <h2>Regla práctica</h2>
+                </div>
+                <ul class="check-list">
+                    <li>No uses div por costumbre si existe una etiqueta semántica mejor.</li>
+                    <li>Separa contenido, presentación y comportamiento.</li>
+                    <li>Repite patrones visuales con clases, no con estilos sueltos.</li>
+                    <li>Si un bloque tiene sentido por sí solo, probablemente sea un article.</li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- Explicación práctica de CSS -->
+        <section id="css" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">CSS</p>
+                <h2>Cómo se ve un CSS más profesional</h2>
+            </div>
+
+            <article class="card explanation-card">
+                <div class="section-heading">
+                    <p class="eyebrow">Explicación</p>
+                    <h3>Qué hace cada grupo de propiedades</h3>
+                </div>
+                <div class="definition-grid">
+                    <div>
+                        <h4>Box model</h4>
+                        <p><strong>margin</strong> separa elementos, <strong>padding</strong> crea espacio interno y
+                            <strong>border</strong> dibuja el borde visible.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Color y fondo</h4>
+                        <p><strong>color</strong> cambia el texto y <strong>background</strong> pinta el fondo o una
+                            capa visual del bloque.</p>
+                    </div>
+                    <div>
+                        <h4>Tipografía</h4>
+                        <p><strong>font-size</strong>, <strong>line-height</strong> y <strong>font-weight</strong>
+                            controlan lectura, ritmo y jerarquía.</p>
+                    </div>
+                    <div>
+                        <h4>Layout</h4>
+                        <p><strong>display: grid</strong> y <strong>display: flex</strong> organizan columnas, filas y
+                            alineación de elementos.</p>
+                    </div>
+                </div>
+            </article>
+
+            <div class="feature-grid">
+                <article class="card feature-card">
+                    <span class="feature-label">01</span>
+                    <h3>Variables</h3>
+                    <p>Centralizan colores, sombras y tamaños para que el diseño sea consistente y fácil de ajustar.</p>
+                </article>
+                <article class="card feature-card">
+                    <span class="feature-label">02</span>
+                    <h3>Layout</h3>
+                    <p>Grid y flexbox ayudan a organizar bloques de contenido sin depender de trucos frágiles.</p>
+                </article>
+                <article class="card feature-card">
+                    <span class="feature-label">03</span>
+                    <h3>Responsive</h3>
+                    <p>El diseño debe adaptarse a pantallas pequeñas, medianas y grandes sin romperse.</p>
+                </article>
+                <article class="card feature-card">
+                    <span class="feature-label">04</span>
+                    <h3>Estados</h3>
+                    <p>Hover, focus y otras interacciones hacen que la interfaz se sienta más clara y usable.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ejemplos reales de HTML y CSS -->
+        <section id="ejemplos" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Más ejemplos</p>
+                <h2>HTML y CSS aplicados a casos reales</h2>
+            </div>
+
+            <div class="example-grid">
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">HTML</p>
+                        <h3>Tarjeta de contenido</h3>
+                    </div>
+                    <pre class="code-block"><code>&lt;article class="card"&gt;
+  &lt;h3&gt;Título&lt;/h3&gt;
+  &lt;p&gt;Descripción corta del contenido.&lt;/p&gt;
+  &lt;a href="#"&gt;Leer más&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+                    <p>Sirve para noticias, productos, cursos o cualquier bloque independiente.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">HTML</p>
+                        <h3>Formulario básico</h3>
+                    </div>
+                    <pre class="code-block"><code>&lt;form&gt;
+  &lt;label for="email"&gt;Correo&lt;/label&gt;
+  &lt;input id="email" type="email" /&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                    <p>Útil cuando quieres recolectar datos sin perder accesibilidad ni orden semántico.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">CSS</p>
+                        <h3>Diseño de tarjeta</h3>
+                    </div>
+                    <pre class="code-block"><code>.card {
+  background: white;
+  border: 1px solid #eadac0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 40px rgba(56, 40, 16, 0.12);
+}</code></pre>
+                    <p>Combina superficie, borde, radio y sombra para dar sensación de bloque reutilizable.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">CSS</p>
+                        <h3>Layout responsive</h3>
+                    </div>
+                    <pre class="code-block"><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}</code></pre>
+                    <p>Hace que los elementos se acomoden solos según el ancho disponible.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ejemplos extra para subir nivel -->
+        <section id="ejemplos-avanzados" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Nivel siguiente</p>
+                <h2>Ejemplos extra (más reales)</h2>
+            </div>
+
+            <div class="example-grid">
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">HTML</p>
+                        <h3>Header con logo y menú</h3>
+                    </div>
+                    <pre class="code-block"><code>&lt;header class="topbar"&gt;
+  &lt;h1&gt;Mi Marca&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#"&gt;Inicio&lt;/a&gt;
+    &lt;a href="#"&gt;Servicios&lt;/a&gt;
+    &lt;a href="#"&gt;Contacto&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                    <p>Patrón típico para sitios personales, portafolios y landing pages.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">HTML</p>
+                        <h3>Sección de tarjetas</h3>
+                    </div>
+                    <pre class="code-block"><code>&lt;section class="cards"&gt;
+  &lt;article&gt;Tarjeta 1&lt;/article&gt;
+  &lt;article&gt;Tarjeta 2&lt;/article&gt;
+  &lt;article&gt;Tarjeta 3&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+                    <p>Sirve para mostrar servicios, productos, features o posts.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">CSS</p>
+                        <h3>Menú horizontal con flex</h3>
+                    </div>
+                    <pre class="code-block"><code>.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+                    <p>Un patrón simple y muy usado para alinear logo y navegación.</p>
+                </article>
+
+                <article class="card example-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">CSS</p>
+                        <h3>Botón con estado hover</h3>
+                    </div>
+                    <pre class="code-block"><code>.btn {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #c26d12;
+  color: white;
+}
+
+.btn:hover {
+  background: #9a4f07;
+}</code></pre>
+                    <p>Aporta feedback visual claro cuando el usuario interactúa.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ejercicios para practicar por tu cuenta -->
+        <section id="ejercicios" class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">Práctica</p>
+                <h2>Ejercicios para aprender de verdad</h2>
+            </div>
+
+            <div class="exercise-grid">
+                <article class="card exercise-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">Ejercicio 1</p>
+                        <h3>Solo HTML</h3>
+                    </div>
+                    <p>Crea una página con <strong>header</strong>, <strong>nav</strong>, <strong>main</strong>, tres
+                        <strong>section</strong> y un <strong>footer</strong>.
+                    </p>
+                    <ul>
+                        <li>Usa un título principal y dos subtítulos.</li>
+                        <li>Agrega una lista y una imagen con texto alternativo.</li>
+                        <li>Revisa que el contenido tenga sentido semántico.</li>
+                    </ul>
+                </article>
+
+                <article class="card exercise-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">Ejercicio 2</p>
+                        <h3>Solo CSS</h3>
+                    </div>
+                    <p>Diseña una tarjeta simple con fondo claro, borde, sombra y espaciado interno.</p>
+                    <ul>
+                        <li>Cambia la tipografía y la altura de línea.</li>
+                        <li>Aplica hover a un enlace o botón.</li>
+                        <li>Haz que el bloque se vea bien en móvil.</li>
+                    </ul>
+                </article>
+
+                <article class="card exercise-card">
+                    <div class="section-heading">
+                        <p class="eyebrow">Ejercicio 3</p>
+                        <h3>Mini proyecto</h3>
+                    </div>
+                    <p>Construye una landing page con hero, beneficios, ejemplos y contacto.</p>
+                    <ul>
+                        <li>Usa grid para organizar las tarjetas.</li>
+                        <li>Usa variables CSS para definir colores.</li>
+                        <li>Agrega una sección final con un CTA claro.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Lista de verificación antes de publicar -->
+        <section class="card checklist-card">
+            <div class="section-heading">
+                <p class="eyebrow">Checklist</p>
+                <h2>Antes de publicar</h2>
+            </div>
+            <ul class="check-list two-columns">
+                <li>Solo existe un main en la página.</li>
+                <li>Los títulos siguen un orden lógico.</li>
+                <li>Los enlaces tienen un destino claro.</li>
+                <li>Los colores mantienen buen contraste.</li>
+                <li>Los espacios entre bloques son consistentes.</li>
+                <li>El contenido funciona también en móvil.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Hecho para aprender HTML y CSS con una base más cercana a un proyecto real.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
