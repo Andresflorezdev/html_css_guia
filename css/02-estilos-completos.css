@@ -1,0 +1,551 @@
+:root {
+    /* Variables globales de color y sombra para mantener consistencia */
+    --bg: #f4eee4;
+    --surface: #fff9f0;
+    --surface-strong: #fff2de;
+    --text: #1f1a14;
+    --muted: #665b4f;
+    --primary: #c26d12;
+    --primary-dark: #9a4f07;
+    --accent: #7c5c2c;
+    --border: #eadac0;
+    --border-strong: #d8c29f;
+    --shadow: 0 18px 40px rgba(56, 40, 16, 0.12);
+}
+
+/* Reset básico y comportamiento global */
+* {
+    /* Incluye padding y border dentro del ancho/alto total */
+    box-sizing: border-box;
+}
+
+/* Scroll suave al navegar por anclas internas */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo base del documento */
+body {
+    /* Quita márgenes por defecto */
+    margin: 0;
+    /* Asegura que cubra toda la altura de la ventana */
+    min-height: 100vh;
+    /* Tipografía principal del sitio */
+    font-family: Georgia, "Times New Roman", serif;
+    /* Fondo con capas para dar profundidad */
+    background:
+        radial-gradient(circle at top, rgba(194, 109, 18, 0.14), transparent 30%),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+    /* Color base de texto */
+    color: var(--text);
+}
+
+/* Hereda color del contexto para los enlaces */
+a {
+    color: inherit;
+}
+
+/* Comportamiento seguro para imágenes responsive */
+img {
+    /* Nunca excede el ancho del contenedor */
+    max-width: 100%;
+    /* Evita espacios fantasmas de elementos inline */
+    display: block;
+}
+
+/* Contenedor general del contenido */
+.container {
+    /* Ancho máximo adaptable */
+    width: min(1100px, calc(100% - 2rem));
+    /* Centra el contenedor */
+    margin: 0 auto;
+}
+
+/* Enlace de accesibilidad para saltar al contenido */
+.skip-link {
+    /* Posición flotante para accesibilidad por teclado */
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    transform: translate(-50%, -140%);
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: var(--text);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    /* Se muestra al recibir foco */
+    transform: translate(-50%, 0);
+}
+
+/* Hero principal */
+.site-header {
+    /* Espacio vertical del encabezado */
+    padding: 3.5rem 0 2.5rem;
+    /* Fondo con gradientes decorativos */
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 35%),
+        linear-gradient(135deg, #2c2118, #5b4021);
+    color: #fffaf1;
+}
+
+.hero-layout {
+    /* Divide hero en dos columnas */
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 0.95fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.eyebrow {
+    /* Etiqueta pequeña sobre los títulos */
+    margin: 0 0 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.site-header h1 {
+    /* Título principal grande y fluido */
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    line-height: 1.02;
+}
+
+.hero-copy p {
+    /* Texto descriptivo del hero */
+    margin: 1rem 0 0;
+    max-width: 62ch;
+    color: #f4e7d1;
+    line-height: 1.75;
+}
+
+.hero-actions {
+    /* Botones del hero alineados con espacio */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.button {
+    /* Botón base reutilizable */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.75rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+    /* Microinteracción al pasar el mouse */
+    transform: translateY(-1px);
+}
+
+/* Variante principal del botón */
+.button-primary {
+    background: var(--surface);
+    color: var(--text);
+}
+
+/* Variante secundaria del botón */
+.button-secondary {
+    border-color: rgba(255, 250, 241, 0.3);
+    color: #fffaf1;
+}
+
+/* Botones dentro de formularios: contraste más fuerte */
+form .button-primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+form .button-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+form .button-secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-strong);
+}
+
+form .button-secondary:hover {
+    background: var(--surface-strong);
+    border-color: var(--accent);
+}
+
+/* Panel lateral de la ruta de aprendizaje */
+.hero-panel {
+    /* Tarjeta lateral translúcida */
+    padding: 1.4rem;
+    border-radius: 24px;
+    background: rgba(255, 250, 241, 0.08);
+    border: 1px solid rgba(255, 250, 241, 0.14);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+.panel-title {
+    /* Título interno del panel */
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f4e7d1;
+}
+
+.roadmap {
+    /* Lista de pasos sugeridos */
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #fffaf1;
+    line-height: 1.7;
+}
+
+/* Navegación fija */
+.site-nav {
+    /* Barra de navegación fija en la parte superior */
+    background: rgba(255, 250, 241, 0.9);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+}
+
+.nav-links {
+    /* Distribución de enlaces del menú */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.nav-links a {
+    /* Estilo visual del enlace del menú */
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    /* Estado hover del menú */
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary);
+}
+
+/* Estructura del contenido */
+.content-section,
+.split-section {
+    /* Espaciado vertical entre bloques */
+    margin-bottom: 1.5rem;
+}
+
+/* Espaciado del contenido principal */
+main {
+    padding: 2rem 0 3rem;
+}
+
+/* Tarjeta base reutilizable en toda la guía */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 44px rgba(56, 40, 16, 0.16);
+}
+
+/* Caja destacada del resumen */
+.hero {
+    /* Tarjeta destacada del resumen */
+    border-left: 8px solid var(--primary);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
+}
+
+.section-heading {
+    /* Separación del encabezado de sección */
+    margin-bottom: 1rem;
+}
+
+.section-heading h2,
+.card h3,
+.card h2 {
+    /* Quita margen por defecto de títulos */
+    margin: 0;
+}
+
+.section-heading h2 {
+    /* Tamaño fluido para títulos de bloque */
+    font-size: clamp(1.5rem, 2vw, 2.1rem);
+}
+
+.section-heading p+h2 {
+    /* Ajusta distancia entre subtítulo y título */
+    margin-top: 0.15rem;
+}
+
+.inline-points,
+.check-list,
+.roadmap {
+    /* Sangría uniforme para listas */
+    padding-left: 1.2rem;
+}
+
+.inline-points,
+.check-list {
+    /* Ritmo vertical legible de listas */
+    margin: 1rem 0 0;
+    line-height: 1.8;
+}
+
+.inline-points {
+    /* Lista horizontal en pantallas grandes */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    list-style: disc;
+}
+
+/* Grillas reutilizables */
+.tag-grid,
+.feature-grid,
+.exercise-grid {
+    /* Grillas adaptables para tarjetas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.1rem;
+}
+
+.example-grid {
+    /* Grilla de ejemplos con mínimo un poco mayor */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.file-grid {
+    /* Grilla para el portal de archivos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.file-card h3 {
+    margin-bottom: 0.65rem;
+}
+
+.file-link-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    line-height: 1.9;
+}
+
+.file-link-list a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(154, 79, 7, 0.35);
+}
+
+.file-link-list a:hover {
+    color: var(--text);
+    border-bottom-color: rgba(31, 26, 20, 0.45);
+}
+
+/* Tarjetas de contenido */
+.tag-card,
+.feature-card,
+.example-card,
+.exercise-card {
+    /* Iguala alturas para mejor composición visual */
+    height: 100%;
+}
+
+.tag-card p,
+.feature-card p,
+.card p,
+.card li {
+    /* Color y altura de línea para textos secundarios */
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.split-section {
+    /* Layout de dos columnas para ejemplo + tips */
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.75fr);
+    gap: 1rem;
+}
+
+/* Bloque de código y notas */
+.code-card,
+.tip-card,
+.checklist-card,
+.explanation-card,
+.example-card {
+    /* Evita margen extra dentro de composiciones en grilla */
+    margin-bottom: 0;
+}
+
+.code-block {
+    /* Bloque visual para snippets de código */
+    margin: 1rem 0 0;
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid var(--border-strong);
+    background: #2b2118;
+    color: #fff4e2;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.definition-grid {
+    /* Grilla para explicar conceptos de CSS */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.definition-grid h4 {
+    /* Subtítulo de cada definición */
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+}
+
+.feature-card {
+    /* Permite posicionar etiqueta numerada */
+    position: relative;
+    padding-top: 2rem;
+}
+
+.feature-card h3 {
+    /* Evita que el número se monte sobre el título */
+    padding-left: 2.5rem;
+}
+
+.feature-card p {
+    margin-top: 0.75rem;
+}
+
+.feature-label {
+    /* Burbuja numérica de cada feature */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.1rem;
+    min-height: 2.1rem;
+    border-radius: 999px;
+    background: var(--surface-strong);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    position: absolute;
+    top: 0.85rem;
+    left: 0.95rem;
+}
+
+.example-card {
+    /* Estructura vertical para ejemplo + texto */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Lista de verificación en dos columnas */
+.check-list {
+    /* Divide checklist en dos columnas en desktop */
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.check-list li {
+    /* Evita que un item se corte entre columnas */
+    break-inside: avoid;
+}
+
+/* Pie de página del sitio */
+.site-footer {
+    padding: 1.5rem 0;
+    background: #2b2118;
+    color: #f4e7d1;
+    text-align: center;
+}
+
+.site-footer p {
+    /* Quita margen por defecto del texto del footer */
+    margin: 0;
+}
+
+/* Ajustes responsive */
+@media (max-width: 860px) {
+
+    .hero-layout,
+    .split-section {
+        /* Colapsa layout a una sola columna */
+        grid-template-columns: 1fr;
+    }
+
+    .check-list {
+        /* Checklist en una columna en tablet/móvil */
+        columns: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        /* Reduce márgenes laterales en móvil */
+        width: min(100% - 1.25rem, 1100px);
+    }
+
+    .site-header {
+        /* Menos espacio superior en pantallas pequeñas */
+        padding-top: 2.5rem;
+    }
+
+    .hero-actions {
+        /* Botones uno debajo del otro en móvil */
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        /* Botones a ancho completo en móvil */
+        width: 100%;
+    }
+
+    .card {
+        /* Padding más compacto para tarjetas */
+        padding: 1.25rem;
+    }
+
+    .inline-points {
+        /* Vuelve lista horizontal a vertical */
+        display: block;
+    }
+}

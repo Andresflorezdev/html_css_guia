@@ -1,0 +1,25 @@
+/* Estilos mínimos para entender la base de CSS */
+body {
+    /* Tipo de letra base de toda la página */
+    font-family: Arial, sans-serif;
+    /* Quitamos márgenes por defecto del navegador */
+    margin: 0;
+    /* Separación interna para que el contenido respire */
+    padding: 20px;
+    /* Fondo gris claro */
+    background-color: #f5f5f5;
+    /* Color base del texto */
+    color: #222;
+}
+
+/* Título principal */
+h1 {
+    /* Color azul para destacar el encabezado */
+    color: #0b5ed7;
+}
+
+/* Párrafos con lectura cómoda */
+p {
+    /* Más aire entre líneas para mejorar legibilidad */
+    line-height: 1.6;
+}
